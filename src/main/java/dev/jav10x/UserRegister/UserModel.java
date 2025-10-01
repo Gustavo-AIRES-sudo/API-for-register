@@ -1,4 +1,4 @@
-package dev.jav10x.CadastroDeNinjas;
+package dev.jav10x.UserRegister;
 
 import jakarta.persistence.*;
 

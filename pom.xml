@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>dev.jav10x</groupId>
-	<artifactId>CadastroDeNinjas</artifactId>
+	<artifactId>UserRegister</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ProjetoSpringBootInicial</name>
 	<description>Demo project for Spring Boot</description>
