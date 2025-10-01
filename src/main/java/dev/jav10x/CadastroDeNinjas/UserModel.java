@@ -1,18 +1,13 @@
 package dev.jav10x.CadastroDeNinjas;
-<<<<<<< HEAD
 
-=======
->>>>>>> 08a3b5af92ca60e2ec91c3f72b5017800697a6b5
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
-<<<<<<< HEAD
 @Entity
-@Table(name = "tb_user_register")
+@Table(name = "tb_user_register") //Dentro do escopo temos o nome da Table//
 
 public class UserModel {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //Gerando o valor de ID / / IDENTITY: NUMEROS.
     Long ID;
     //------------//
     String fullName;
@@ -22,23 +17,6 @@ public class UserModel {
     public UserModel(Long ID, String fullName, String gmail, int age) {
         this.ID = ID;
         this.fullName = fullName;
-=======
-@Entity //Transforma a classe em uma entidade da database. Tabela:
-@Table(name = "tb_user_register") //Responsável por criar a Tabela
-public class UserModel {
-
-    @Id
-    Long ID;
-
-    String name;
-    String surname;
-    String gmail;
-    int age;
-
-    public UserModel(String name, String surname, String gmail, int age) {
-        this.name = name;
-        this.surname = surname;
->>>>>>> 08a3b5af92ca60e2ec91c3f72b5017800697a6b5
         this.gmail = gmail;
         this.age = age;
     }
@@ -46,7 +24,6 @@ public class UserModel {
     public UserModel() {
     }
 
-<<<<<<< HEAD
     public Long getID() {
         return ID;
     }
@@ -61,22 +38,6 @@ public class UserModel {
 
     public void setFullName(String fullName) {
         this.fullName = fullName;
-=======
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
->>>>>>> 08a3b5af92ca60e2ec91c3f72b5017800697a6b5
     }
 
     public String getGmail() {

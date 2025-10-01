@@ -28,3 +28,4 @@
 
         OTHER VISION
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    @GeneratedValue: Gera um sequência de valores para o ID, que serve para a manipulação de dados do usuário;
