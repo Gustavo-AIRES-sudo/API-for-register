@@ -1,6 +1,0 @@
-É importante destacar as anotações do Mapping:
-    @GetMapping é responsável por puxar informações
-    @PostMapping é responsável por mandar informações
-    @PutMapping é responsável por alterar informações
-    @PatchMapping também é responsável por alterar informações
-    @DeleteMapping é responsável por deletar a informação
