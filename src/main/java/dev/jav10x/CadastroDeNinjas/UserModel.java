@@ -1,12 +1,15 @@
 package dev.jav10x.CadastroDeNinjas;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity //Transforma a classe em uma entidade da database. Tabela:
 @Table(name = "tb_user_register") //Responsável por criar a Tabela
 public class UserModel {
 
+    @Id
     Long ID;
+
     String name;
     String surname;
     String gmail;
