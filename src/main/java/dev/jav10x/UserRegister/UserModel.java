@@ -10,9 +10,9 @@ public class UserModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY) //Gerando o valor de ID / / IDENTITY: NUMEROS.
     Long ID;
     //------------//
-    String fullName;
-    String gmail;
-    int age;
+    private String fullName;
+    private String gmail;
+    private int age;
 
     public UserModel(Long ID, String fullName, String gmail, int age) {
         this.ID = ID;
