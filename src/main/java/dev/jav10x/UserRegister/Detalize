@@ -7,6 +7,9 @@
 
     //TODO: Criar as informações do usuário: nome, sobrenome, idade e trabalho.
     //TO COMMIT SOMETHING: git commit -m "Rename"
+    //TO SEE THE COMMITS IN THE PAST: git log --oneline
+    //TO UPDATE ANY COMMIT, UPDATING SOME THINGS THAT YOU DON'T REALIZED: git commit --amend
+    //TO FORCE THE PUSH: git push --force
 
     @Entity: Advinda da JPA, ela transforma toda a classe em uma entidade;
     @Table: Alocação das variáveis em uma tabela;

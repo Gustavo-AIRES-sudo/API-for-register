@@ -1,0 +1,16 @@
+[33mdec96d7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m nothing special
+[33m210a4c6[m variables of user to private
+[33mb5ad410[m Nothing new
+[33m7c4eb5f[m readMe
+[33m347b3dd[m Just a rename of File
+[33m548ac42[m Create README.md
+[33m68cf591[m Application of annotation '@GeneratedValue' and mutation of file 'Necessary' to 'Detalize' and his content
+[33m5f4d206[m Updating this version, 'cause it's outdated
+[33m7521bfc[m Last updates added to this unpdated version of API
+[33m08a3b5a[m Merge pull request #7 from Gustavo-AIRES-sudo/UpdateNumb.1
+[33m4e70c07[m[33m ([m[1;31morigin/UpdateNumb.1[m[33m, [m[1;32mUpdateNumb.1[m[33m)[m Implementação da anotação @Entity, @Table e @Id: Implementação do sistema de identidade, tabela e ID
+[33m39dc5c0[m changed version of java to 21; import of JPA and aplication of UserModel on project
+[33ma1f8bf0[m How commit
+[33m1a74138[m Rename
+[33m7496f5e[m Controller created
+[33m68233e6[m first commit

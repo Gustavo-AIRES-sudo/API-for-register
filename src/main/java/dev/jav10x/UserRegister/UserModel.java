@@ -6,10 +6,11 @@ import jakarta.persistence.*;
 @Table(name = "tb_user_register") //Dentro do escopo temos o nome da Table//
 
 public class UserModel {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //Gerando o valor de ID / / IDENTITY: NUMEROS.
-    Long ID;
-    //------------//
+    private Long ID;
+
     private String fullName;
     private String gmail;
     private int age;
