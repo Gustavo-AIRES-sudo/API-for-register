@@ -11,7 +11,7 @@
     //TO UPDATE ANY COMMIT, UPDATING SOME THINGS THAT YOU DON'T REALIZED: git commit --amend
     //TO FORCE THE PUSH: git push --force
 
-    @Entity: Advinda da JPA, ela transforma toda a classe em uma entidade;
+    @Entity: Advinda da JPA, ela transforma toda a classe em uma entidade. Mapeia a classe em uma table;
     @Table: Alocação das variáveis em uma tabela;
     @Id: Demonstra ao provedor de persistência a necessidade desse valor ter uma forma única, que no caso, é a variável "ID".
     Isso é necessário para a referenciação de cada linha da tabela. Sem a anotação "@Id" não será possível manipular os dados do banco de dados

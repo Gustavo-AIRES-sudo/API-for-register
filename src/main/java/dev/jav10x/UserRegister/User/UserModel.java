@@ -1,6 +1,9 @@
-package dev.jav10x.UserRegister;
+package dev.jav10x.UserRegister.User;
 
+import dev.jav10x.UserRegister.Responsabilities.UserResposabilitiesModel;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tb_user_register") //Dentro do escopo temos o nome da Table//
@@ -14,6 +17,11 @@ public class UserModel {
     private String fullName;
     private String gmail;
     private int age;
+    private List<UserResposabilitiesModel> resposabilitiesList;
+
+    UserResposabilitiesModel userJob = new UserResposabilitiesModel(resposabilitiesList);
+
+
 
     public UserModel(Long ID, String fullName, String gmail, int age) {
         this.ID = ID;
