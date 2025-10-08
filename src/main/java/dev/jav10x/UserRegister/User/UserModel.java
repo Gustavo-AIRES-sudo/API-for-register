@@ -17,10 +17,11 @@ public class UserModel {
     private String fullName;
     private String gmail;
     private int age;
-    private List<UserResposabilitiesModel> resposabilitiesList;
 
-    UserResposabilitiesModel userJob = new UserResposabilitiesModel(resposabilitiesList);
-
+    //@ManyToOne: usuário tem uma única resposanbilidade: muitos (nome da classe) terão uma responsabilidade.
+    @ManyToOne
+    @JoinColumn(name = "resposabilites_id") //Foreing Key/ Chave Estrangeira: Conectar duas tabelas ou mais por uma key(id)
+    private UserResposabilitiesModel responsabilitites;
 
 
     public UserModel(Long ID, String fullName, String gmail, int age) {
