@@ -35,3 +35,4 @@
     @NoArgsConstructor(Lombok): Cria um construtor vazio(no-args-constructor --sem argumento--) parâmetros da aplicação;
     @AllArgsConstructor(Lombok): Cria todos os construtores com parâmetros(all-args-constructor) para a aplicação;
     @Data(Lombok): Cria Getters e Setters das variáveis;
+    @Column (unique = true): Transforma a coluna de determinada tabela única, ou seja, essa coluna não poderá haver repetições de elementos;

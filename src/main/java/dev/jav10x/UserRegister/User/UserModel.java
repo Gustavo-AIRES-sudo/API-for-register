@@ -20,7 +20,10 @@ public class UserModel {
     private Long ID;
 
     private String fullName;
+
+    @Column (unique = true)
     private String gmail;
+
     private int age;
 
     //@ManyToOne: usuário tem uma única resposanbilidade: muitos (nome da classe) terão uma responsabilidade.
