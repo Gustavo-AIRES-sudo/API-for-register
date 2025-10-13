@@ -32,3 +32,6 @@
         OTHER VISION
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
     @GeneratedValue: Gera um sequência de valores para o ID, que serve para a manipulação de dados do usuário;
+    @NoArgsConstructor(Lombok): Cria um construtor vazio(no-args-constructor --sem argumento--) parâmetros da aplicação;
+    @AllArgsConstructor(Lombok): Cria todos os construtores com parâmetros(all-args-constructor) para a aplicação;
+    @Data(Lombok): Cria Getters e Setters das variáveis;

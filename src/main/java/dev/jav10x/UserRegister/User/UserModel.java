@@ -2,12 +2,17 @@ package dev.jav10x.UserRegister.User;
 
 import dev.jav10x.UserRegister.Responsabilities.UserResposabilitiesModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Entity
 @Table(name = "tb_user_register") //Dentro do escopo temos o nome da Table//
-
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class UserModel {
 
     @Id
@@ -23,46 +28,4 @@ public class UserModel {
     @JoinColumn(name = "resposabilites_id") //Foreing Key/ Chave Estrangeira: Conectar duas tabelas ou mais por uma key(id)
     private UserResposabilitiesModel responsabilitites;
 
-
-    public UserModel(Long ID, String fullName, String gmail, int age) {
-        this.ID = ID;
-        this.fullName = fullName;
-        this.gmail = gmail;
-        this.age = age;
-    }
-
-    public UserModel() {
-    }
-
-    public Long getID() {
-        return ID;
-    }
-
-    public void setID(Long ID) {
-        this.ID = ID;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
-    public String getGmail() {
-        return gmail;
-    }
-
-    public void setGmail(String gmail) {
-        this.gmail = gmail;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 }
