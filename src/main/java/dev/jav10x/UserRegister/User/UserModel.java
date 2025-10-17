@@ -17,12 +17,12 @@ public class UserModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY) //Gerando o valor de ID / / IDENTITY: NUMEROS.
     private Long ID;
 
-    private String fullName;
+    private String userFullName;
 
     @Column (unique = true)
-    private String gmail;
+    private String userGmail;
 
-    private int age;
+    private int userAge;
 
     //@ManyToOne: usuário tem uma única resposanbilidade: muitos (nome da classe) terão uma responsabilidade.
     @ManyToOne

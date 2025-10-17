@@ -1,3 +1,4 @@
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 É importante destacar as anotações do Mapping:
     @GetMapping é responsável por puxar informações;
     @PostMapping é responsável por mandar informações;
@@ -27,7 +28,7 @@
     @JoinColumn: Cria uma Foreing Key / Chave Estrangeira, a qual conecta duas tabelas ou mais por uma key(id).
 
     @Column (unique = true): Transforma a coluna de determinada tabela única, ou seja, essa coluna não poderá haver repetições de elementos;
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     "A JPA exige um contrato básico para que uma classe seja considerada uma Entidade Persistente válida:
      -> Deve ser anotada com @Entity.
      ->Deve ter um campo que represente a chave primária, anotado com @Id.
@@ -45,10 +46,11 @@
 
      JpaRepository: abstrador >> Simplifica ações a aplicação, especificamente no Repository, o qual armazenará informações no database. É necessário informar qual classe o ORM escaneará ativamente e o tipo do ID da classe, veja:
      JpaRepository<(nome da classe), (tipo do ID)> -> JpaRepository<UserModel, Long>
-     ORM: verifica toda a classe que está sendo passada no JpaRepository na aplicação e cria uma tabela parecida com a a entidade (Entity);
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     ORM(Object Relational Mapping): verifica toda a classe que está sendo passada no JpaRepository na aplicação e cria uma tabela parecida com a a entidade(Entity). O ORM basicamente mapeia a classe e traduz para o banco de dados(conecta a POO com o banco de dados), armazenando os dados de forma que o database entenda, uma vez que tal tecnologia tenha uma linguagem de interpretação própria.
+     ...Por exemplo, para um banco de dados, o meu long ID seria uma (PK)(primary key), o String userFullName e String userGmail seria um (VARCHAR(255))->(255 caractéres), o userAge seria um (INT) e responsabilities_id como FK(Foreing Key).
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     Lombok: Biblioteca java abstradora, ou seja, facilita certas tarefas como: criar Getters, Setters, Construtores, entre outros:
         @NoArgsConstructor(Lombok): Cria um construtor vazio(no-args-constructor --sem argumento--) parâmetros da aplicação;
         @AllArgsConstructor(Lombok): Cria todos os construtores com parâmetros(all-args-constructor) para a aplicação;
         @Data(Lombok): Cria Getters e Setters das variáveis;
-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
