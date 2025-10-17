@@ -12,9 +12,21 @@
     //TO FORCE THE PUSH: git push --force
 
     @Entity: Advinda da JPA, ela transforma toda a classe em uma entidade. Mapeia a classe em uma table;
+
     @Table: Alocação das variáveis em uma tabela;
+
     @Id: Demonstra ao provedor de persistência a necessidade desse valor ter uma forma única, que no caso, é a variável "ID".
     Isso é necessário para a referenciação de cada linha da tabela. Sem a anotação "@Id" não será possível manipular os dados do banco de dados
+
+    @GeneratedValue: Gera um sequência de valores para o ID, que serve para a manipulação de dados do usuário;
+
+    @ManyToOne: Usuário tem uma única resposanbilidade: muitos (nome da classe) terão uma responsabilidade.
+
+    @OneToMany: Uma responsabilidade poderá ser aplicada à vários usuários.
+
+    @JoinColumn: Cria uma Foreing Key / Chave Estrangeira, a qual conecta duas tabelas ou mais por uma key(id).
+
+    @Column (unique = true): Transforma a coluna de determinada tabela única, ou seja, essa coluna não poderá haver repetições de elementos;
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
     "A JPA exige um contrato básico para que uma classe seja considerada uma Entidade Persistente válida:
      -> Deve ser anotada com @Entity.
@@ -30,9 +42,13 @@
         ->Erro de configuração de run time no início da aplicação"
 
         OTHER VISION
+
+     JpaRepository: abstrador >> Simplifica ações a aplicação, especificamente no Repository, o qual armazenará informações no database. É necessário informar qual classe o ORM escaneará ativamente e o tipo do ID da classe, veja:
+     JpaRepository<(nome da classe), (tipo do ID)> -> JpaRepository<UserModel, Long>
+     ORM: verifica toda a classe que está sendo passada no JpaRepository na aplicação e cria uma tabela parecida com a a entidade (Entity);
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
-    @GeneratedValue: Gera um sequência de valores para o ID, que serve para a manipulação de dados do usuário;
-    @NoArgsConstructor(Lombok): Cria um construtor vazio(no-args-constructor --sem argumento--) parâmetros da aplicação;
-    @AllArgsConstructor(Lombok): Cria todos os construtores com parâmetros(all-args-constructor) para a aplicação;
-    @Data(Lombok): Cria Getters e Setters das variáveis;
-    @Column (unique = true): Transforma a coluna de determinada tabela única, ou seja, essa coluna não poderá haver repetições de elementos;
+    Lombok: Biblioteca java abstradora, ou seja, facilita certas tarefas como: criar Getters, Setters, Construtores, entre outros:
+        @NoArgsConstructor(Lombok): Cria um construtor vazio(no-args-constructor --sem argumento--) parâmetros da aplicação;
+        @AllArgsConstructor(Lombok): Cria todos os construtores com parâmetros(all-args-constructor) para a aplicação;
+        @Data(Lombok): Cria Getters e Setters das variáveis;
+----------------------------------------------------------------------------------------------------------------------------------------------------------------

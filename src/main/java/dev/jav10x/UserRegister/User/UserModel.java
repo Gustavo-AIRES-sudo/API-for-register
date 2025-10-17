@@ -1,12 +1,10 @@
 package dev.jav10x.UserRegister.User;
 
-import dev.jav10x.UserRegister.Responsabilities.UserResposabilitiesModel;
+import dev.jav10x.UserRegister.Responsabilities.UserResponsabilitiesModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.List;
 
 @Entity
 @Table(name = "tb_user_register") //Dentro do escopo temos o nome da Table//
@@ -29,6 +27,6 @@ public class UserModel {
     //@ManyToOne: usuário tem uma única resposanbilidade: muitos (nome da classe) terão uma responsabilidade.
     @ManyToOne
     @JoinColumn(name = "resposabilites_id") //Foreing Key/ Chave Estrangeira: Conectar duas tabelas ou mais por uma key(id)
-    private UserResposabilitiesModel responsabilitites;
+    private UserResponsabilitiesModel responsabilitites;
 
 }

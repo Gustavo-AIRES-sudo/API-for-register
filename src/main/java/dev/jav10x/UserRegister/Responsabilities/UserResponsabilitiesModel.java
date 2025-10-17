@@ -5,12 +5,10 @@ import jakarta.persistence.*;
 
 import java.util.List;
 
-//TODO RELACIONAR TABELAS;
-
 @Entity
 @Table(name = "tb_user_responsability")
 
-public class UserResposabilitiesModel {
+public class UserResponsabilitiesModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ID;
