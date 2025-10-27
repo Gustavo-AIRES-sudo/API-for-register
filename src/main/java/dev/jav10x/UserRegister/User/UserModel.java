@@ -27,8 +27,9 @@ public class UserModel {
     private int userAge;
 
     //@ManyToOne: usuário tem uma única resposanbilidade: muitos (nome da classe) terão uma responsabilidade.
+    //owning side
     @ManyToOne
-    @JoinColumn(name = "resposabilites_id") //Foreing Key/ Chave Estrangeira: Conectar duas tabelas ou mais por uma key(id). Também está definindo a coluna "resposabilities_id" na tabela "tb_user_register"
-    private UserResponsabilitiesModel responsabilitites;
+    @JoinColumn(name = "responsabilities") //Foreing Key/ Chave Estrangeira: Conectar duas tabelas ou mais por uma key(id). Também está definindo a coluna "resposabilities_id" na tabela "tb_user_register"
+    private UserResponsabilitiesModel responsabilities;
 
 }
