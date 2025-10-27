@@ -25,7 +25,7 @@
 
     @OneToMany: Uma responsabilidade poderá ser aplicada à vários usuários.
 
-    @JoinColumn: Cria uma Foreing Key / Chave Estrangeira, a qual conecta duas tabelas ou mais por uma key(id).
+    @JoinColumn: Cria uma Foreing Key / Chave Estrangeira. Essa foreing key tem função de conectar duas tabelas ou mais, de modo que essa foreing key seja direcionada à chave primeira, que geralmente é o ID.
 
     @Column (unique = true): Transforma a coluna de determinada tabela única, ou seja, essa coluna não poderá haver repetições de elementos;
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
