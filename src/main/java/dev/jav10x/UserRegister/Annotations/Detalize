@@ -69,3 +69,18 @@
     spring.datasource.driverClassName=org.h2.Driver ->DEFINE A CLASSE DRIVER, OU SEJA, A QUE TRADUZ OS COMANDOS DO JAVA PARA A SQL DO H2
     spring.datasource.username=sa
     spring.datasource.password=
+    DB_CLOSE_ON_EXIT = (FALSE ou TRUE) //Essa anotação é usada quando queremos informar às configurações se queremos que o banco de dados seja excluído ao pararmos a aplicação, ou seja, sairmos do banco ded dados
+        DB_CLOSE_DELAY = -1 //Essa configuração serve para manter o banco de dados ativo mesmo quando ninguém estiver presente nele.
+            --A PRINCIPAL DIFERENÇA ENTRE AMBOS É O CONTEXTO QUE ESTÁ INSERIDO. ENQUANTO ESTE IMPEDE QUE O DB SEJA ENCERRADO APÓS O FECHAMENTO DA ÚLTIMA CONEXÃO JDBC, AQUELE IMPEDE QUE O BANCO DE DADOS SEJA FECHADO APÓS O ENCERRAMENTO DA APLICAÇÃO JVM.
+            --É IMPORTANTE QUE ESSAS CONFIGURAÇÕES ESTEJAM ALOCADAS APÓS O URL DA DB, UMA VEZ QUE ESSAS CONFIG. ESTÃO ATRELADAS À ELA. PODEMOS AFIRMAR QUE SÃO PARÂMETROS DA CONFIGURAÇÃO.
+            --close;
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    -- BANCO DE DADOS(JPA --HIBERNATE-- / CMDS) --
+        COMANDOS QUE COMANDAM COMO O HIBERNATE DEVE INTERARGIR COM O BANCO DE DADOS(H2) E O QUE ELE MOSTRA NO CONSOLE;
+        spring.jpa.hibernate.ddl-auto = update --> HIBERNATE VERIFICA SE HOUVE ALGUMA MUDANÇA ENTRE A(S) CLASSE(S) @ENTITY E AS TABELAS EXISTENTES NO DB. CASO HAJA NOVAS ENTIDADES OU MUDANÇAS NO CAMPO DAS TABELAS, O PRÓPRIO HIBERNATE SERÁ RESPONSÁVEL POR ATUALZIAR AS TABELAS.
+            --É IMPORTANTE CITAR QUE O VALOR AGREGADO AO COMANDO PODERIA VARIAR DE "update". OS VALORES PODEM SER ENTRE: "create", "create-drop" e "none";
+            --close;
+        spring.jpa.show-sql = true --> ESSE COMANDO É UMA FERRAMENTE DE DEBUG E TRANSPARÊNCIA. AO INTRODUZIR ESSA FERRAMENTE COMO TRUE, OU SEJA, ATIVADA, QUALQUER ALTERAÇÃO FEITA PELO HIBERNATE NO BANCO DE DADOS SERÁ IMPRIMIDA NO CONSOLE.
+            --É UMA FERRAMENTA MUITO IMPORTANTE PARA CONSULTAR A DB, ANALISANDO SEU COMPORTAMENTO;
+            --close;
+    --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
