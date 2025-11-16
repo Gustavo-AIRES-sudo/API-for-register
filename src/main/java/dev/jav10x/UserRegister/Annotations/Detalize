@@ -66,6 +66,8 @@
     spring.h2.console.enabled=true -->ATIVA O BANCO DE DADOS
     spring.h2.console.path=/h2-console -->DEFINE O NOME LOCAL PARA ACESSAR O BANCO DE DADOS (localhost:(portal)/h2-console(você define o nome)
     spring.datasource.url=jdbc:h2:mem:userdb -->FAZ TRÊS COISAS: 1- DEFINE QUE É UM BANCO H2: "jdbc:h2:..." 2- DEFINE QUE ELE RODA NA MEMÓRIA: ""...:mem:..." 3- DEFINE O NOME DO BANCO DE DADOS: "...:userdb"
+        --> jdbc:h2:file:./data/userdb (armazena na file, memória persistente);
+
     spring.datasource.driverClassName=org.h2.Driver ->DEFINE A CLASSE DRIVER, OU SEJA, A QUE TRADUZ OS COMANDOS DO JAVA PARA A SQL DO H2
     spring.datasource.username=sa
     spring.datasource.password=
@@ -83,4 +85,14 @@
         spring.jpa.show-sql = true --> ESSE COMANDO É UMA FERRAMENTE DE DEBUG E TRANSPARÊNCIA. AO INTRODUZIR ESSA FERRAMENTE COMO TRUE, OU SEJA, ATIVADA, QUALQUER ALTERAÇÃO FEITA PELO HIBERNATE NO BANCO DE DADOS SERÁ IMPRIMIDA NO CONSOLE.
             --É UMA FERRAMENTA MUITO IMPORTANTE PARA CONSULTAR A DB, ANALISANDO SEU COMPORTAMENTO;
             --close;
-    --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    -- COMANDOS SQL --
+        INSERT INTO TB_USER_RESPONSABILITY (id, difficulty, name_of_responsability):
+            Coloque na tabela "TB_USER_RESPONSABILITY" (parâmetros);
+        VALUES (1, 'Easy', 'backup your data'):
+            Os valores (valores que serão passados para o parâmetro);
+        ALTER TABLE TB_USER_REGISTER(Nome da tabela):
+            Comando para alterar algum elemento de uma tabela qualquer;
+            --"ADD COLUMN user_ranking(passa o nome da tabela) VARCHAR(50)(passa o tipo da variável com sintaxe de banco de dados)":
+                Serve para adicionar uma coluna na tabela;
+        #Mensagem: JAMAIS ALTERAR O BANCO DE DADOS DIRETO NO PROGRAMA QUANDO O DATABASE ESTIVER EM FUNCIONAMENTO. ALTERAR DIRETAMENTE EM SQL.#

@@ -13,7 +13,7 @@ public class UserResponsabilitiesModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ID;
 
-    private String nameOfResponsability;
+    private String name_of_responsability;//TODO: MUDAR PARA "name_of_responsability"
     private Difficulty difficulty;
 
     //Uma responsabilidade poderá ser aplicada à vários usuários.
