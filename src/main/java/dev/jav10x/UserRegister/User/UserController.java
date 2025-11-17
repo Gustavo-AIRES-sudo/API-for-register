@@ -2,8 +2,10 @@ package dev.jav10x.UserRegister.User;
 
 import org.springframework.web.bind.annotation.*;
 
+//LOCALHOST:8080/(route)
 @RestController
-@RequestMapping("user")
+@RequestMapping("/user")
+
 public class UserController {
 
     @GetMapping("/welcome") //Isso faz com que o método "welcome()" seja executado quando uma solicitação HTTP Get seja feita na URL/welcome
@@ -20,28 +22,28 @@ public class UserController {
 
     // Procurar usuário por ID (Read)
     //TODO: COMPLETE
-    @GetMapping("/searchWithId")
+    @GetMapping("/searchId")
     public String get_user_whit_id(){
         return "Users: ";
     }
 
     // Mostrar todos os usuários (Read)
     //TODO: COMPLETE
-    @GetMapping("/showAll")
+    @GetMapping("/show")
     public String get_all_users(){
         return "All users: ";
     }
 
     // Alterar dados dos usuários (Update)
     //TODO: COMPLETE
-    @PutMapping("/alterInfo")
+    @PutMapping("/alter")
     public String alter_user_info() {
         return "Alter user info.";
     }
 
     // Deletar usuário (Delete)
     //TODO: COMPLETE
-    @DeleteMapping("/deleteID")
+    @DeleteMapping("/deleteId")
     public String delete_user_id() {
         return "User deleted";
     }

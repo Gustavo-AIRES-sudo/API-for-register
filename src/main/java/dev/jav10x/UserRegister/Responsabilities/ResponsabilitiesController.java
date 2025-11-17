@@ -2,9 +2,10 @@ package dev.jav10x.UserRegister.Responsabilities;
 
 import org.springframework.web.bind.annotation.*;
 
-//LOCALHOST:8080/route
-@RestController("responsabilties")
-@RequestMapping
+//LOCALHOST:8080/(route)
+@RestController
+@RequestMapping("/responsabilities")
+
 public class ResponsabilitiesController {
 
     //Get -> request to show responsabilities info.
