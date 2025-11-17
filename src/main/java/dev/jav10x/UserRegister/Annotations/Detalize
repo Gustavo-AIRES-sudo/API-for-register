@@ -1,5 +1,7 @@
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 É importante destacar as anotações do Mapping:
+    @RestController: Demonstra que a classe será uma rota para a API;
+    @RequestMapping: A sua principal função é ligar a requisição HTTP do usuário com o código java. Também é possível passar o nome da requisição HTTP. EX: @RequestMapping(responsabilities).
     @GetMapping é responsável por obter dados da aplicação. É anexada na URL;
     @PostMapping é responsável por invocar uma método específico quando uma requisição POST(cliente envia, cria ou modifica informações e, geralmente, armazenar) for feita. É anexada no "body" da requisição HTTP;
     @PutMapping é responsável por alterar informações;
@@ -13,7 +15,6 @@
     //TO FORCE THE PUSH: git push --force
 
     @Entity: Advinda da JPA, ela transforma toda a classe em uma entidade. Mapeia a classe em uma table;
-
     @Table: Alocação das variáveis em uma tabela;
 
     @Id: Demonstra ao provedor de persistência a necessidade desse valor ter uma forma única, que no caso, é a variável "ID".

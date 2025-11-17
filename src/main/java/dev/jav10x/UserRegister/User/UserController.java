@@ -3,7 +3,7 @@ package dev.jav10x.UserRegister.User;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping
+@RequestMapping("user")
 public class UserController {
 
     @GetMapping("/welcome") //Isso faz com que o método "welcome()" seja executado quando uma solicitação HTTP Get seja feita na URL/welcome
@@ -14,7 +14,7 @@ public class UserController {
     // Adicionar usuário (Create)
     //TODO: COMPLETE
     @PostMapping("/add")
-    public String userAdd() {
+    public String user_add() {
         return "User created";
     }
 
@@ -34,7 +34,7 @@ public class UserController {
 
     // Alterar dados dos usuários (Update)
     //TODO: COMPLETE
-    @PutMapping("/alterUserInfo")
+    @PutMapping("/alterInfo")
     public String alter_user_info() {
         return "Alter user info.";
     }
