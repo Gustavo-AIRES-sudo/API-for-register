@@ -79,6 +79,7 @@
             --close;
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     -- BANCO DE DADOS(JPA --HIBERNATE-- / CMDS) --
+    JPA: TRANSFORMA AS QUERY'S DO DB EM MÉTODOS, AS QUAIS SÃO USADADS NO CÓDIGO. (ex de query: SELECT * TB_USER_RESPONSABILITIES)
         COMANDOS QUE COMANDAM COMO O HIBERNATE DEVE INTERARGIR COM O BANCO DE DADOS(H2) E O QUE ELE MOSTRA NO CONSOLE;
         spring.jpa.hibernate.ddl-auto = update --> HIBERNATE VERIFICA SE HOUVE ALGUMA MUDANÇA ENTRE A(S) CLASSE(S) @ENTITY E AS TABELAS EXISTENTES NO DB. CASO HAJA NOVAS ENTIDADES OU MUDANÇAS NO CAMPO DAS TABELAS, O PRÓPRIO HIBERNATE SERÁ RESPONSÁVEL POR ATUALZIAR AS TABELAS.
             --É IMPORTANTE CITAR QUE O VALOR AGREGADO AO COMANDO PODERIA VARIAR DE "update". OS VALORES PODEM SER ENTRE: "create", "create-drop" e "none";
@@ -110,3 +111,12 @@
         spring.flyway.baseline-on-migrate=true:
             Verifica se a migrations(alteração) que você fez anteriormente também está na versão mais atualizada da migration. Caso essa migration já tenha sido feita, o flyway não executa nenhum comando sql da migration repetida;
             close;
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    -- JSON (JavaScript Object Notation --
+        Os dados presentes no banco de dados serão serializados (O ato de serializar diz respeito à função de transformar um tipo de dado em outro.) em um tipo de dado chamado de JSON. Esse tipo de dado serve para armazenar e transportar dados de forma estruturada e legível. A princípio, ele é um mecanismo de linguagem universal entre as tecnologias de programação, de modo que os dados sejam transformados em dados no formato JSON e, esses mesmos dados, se tornem legíveis para todos.
+        @JsonIgnore: Impede o loop infinito (basicamente). -> Previne erro de serialização.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    -- CAMADAS DE CONTROLLER, MODEL, REPOSITORY E SERVICE --
+        Injeção de dependência:
+            A injeção de dependência, no DB, é feita entre a camada de Serviço e a camada de Repository, a qual terá a função de manipular e ler os dados do DB, seja por linguagem SQL ou por ORM. Agora, a camada de Service se aproveita de modo que ela use as funções da camada de Repository para aplicar a lógica de serviço.
+            É importante usar a anotação "@Service" na camada de serviço da aplicaçã para fazer o springboot reconhecer a camada de serviço e validar a injeção de dependência.
